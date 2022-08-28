@@ -17,7 +17,11 @@ class PenggunaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nama' => $this->faker->name,
+            'username' => $this->faker->name,
+            'password' => $this->faker->text,
+            'nilai' => $this->faker->numberBetween(1, 200),
+            'pohon_waris' => $this->faker->numberBetween(1, 200),
         ];
     }
 }

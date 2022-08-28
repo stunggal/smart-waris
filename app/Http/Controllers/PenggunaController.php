@@ -14,7 +14,11 @@ class PenggunaController extends Controller
      */
     public function index()
     {
-        //
+        $nilai = Pengguna::all();
+        foreach ($nilai as $n) {
+            return $n;
+        }
+        return response()->json($nilai);
     }
 
     /**
